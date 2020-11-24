@@ -15,7 +15,7 @@ public class Main {
 			
 			System.out.println( "** WECLOME TO OUR BOOKSTORE ** \n");
 			MyConnection con= new MyConnection();
-           con.dateUse();
+           con.insertBook();
           con.displayBook();
 			
 		

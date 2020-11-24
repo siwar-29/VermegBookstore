@@ -10,8 +10,7 @@ public class MyConnection {
 	 Statement stmt =null;
 	 ResultSet rs=null;
 	 
-	 
-	 
+	 //connexion a la base de données
 	 public MyConnection() {
 		  try {
 			 Class.forName("com.mysql.jdbc.Driver");
@@ -29,8 +28,8 @@ public class MyConnection {
 	 }
 	 
 
-	
-	public  void dateUse() {
+	// la methode pour inserer les livres dans la base de données
+	public  void insertBook() {
 		 try {
 		 stmt=con.createStatement();
 		 String req="INSERT INTO book(title, Author, Price, ReleaseDate) VALUES ('neyra','siwar',13,'2010-2-10')";
@@ -38,12 +37,10 @@ public class MyConnection {
 		}
 		 catch (SQLException e) {
 			 e.printStackTrace();
-			 
-		 }
-		 
+			 }
 		 }
 	 
-	 
+	 // la methode pour recuperer les livres a partir de base de données
 	 public void displayBook() 
 	    {   
 		    
@@ -65,11 +62,5 @@ public class MyConnection {
 	    }}
 	    catch(SQLException e)
 	    {e.printStackTrace();}}
-		
-		
-		 
-	
-	 
-
 
 }

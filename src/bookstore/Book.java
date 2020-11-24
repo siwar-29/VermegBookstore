@@ -16,14 +16,13 @@ public class Book {
     private Date ReleaseDate;
     
 
+    // constructeur vide
     public Book() {
     	super();
     }
 
-    public Book(String title) {
-        this.title = title;
-    }
-
+ 
+    // constructeur avec parametres
     public Book(String title, String Author, double Price, Date ReleaseDate) {
 
         this.title = title;
@@ -34,46 +33,50 @@ public class Book {
     }
 
 
+    //getters
     public int getId() {
         return id;
     }
-
-    public void setId(int id) {
-        this.id = id;
+    public Date getReleaseDate() {
+        return ReleaseDate;
     }
+
 
     public String getTitle() {
         return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getAuthor() {
-        return Author;
-    }
-
-    public void setAuthor(String Author) {
-        this.Author = Author;
     }
 
     public double getPrice() {
         return Price;
     }
 
+    public String getAuthor() {
+        return Author;
+    }
+
+    //setters
+    public void setAuthor(String Author) {
+        this.Author = Author;
+    }
+
+
     public void setPrice(double Price) {
         this.Price = Price;
     }
 
-    public Date getReleaseDate() {
-        return ReleaseDate;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public void setReleaseDate(Date ReleaseDate) {
         this.ReleaseDate = ReleaseDate;
     }
-
+    public void setId(int id) {
+        this.id = id;
+    }
+    
+    //string toString method
+    
    @Override
     public String toString() {
         return "Book{" + "id=" + id + ", title=" + title + ", Author=" + Author + ", Price=" + Price + ", ReleaseDate=" + ReleaseDate + "}";
