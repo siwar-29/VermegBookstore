@@ -52,6 +52,7 @@ public class MyConnection {
 	    while (rs.next()) {
 	        i++;
 	        System.out.println("------------------------------------------");
+	        System.out.println("------------------------------------------");
 
 	        System.out.println("Book n° "+i);
 	        System.out.println("id : " + rs.getInt("id"));
